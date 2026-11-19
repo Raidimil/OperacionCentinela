@@ -1,18 +1,24 @@
-OPERACION CENTINELA
+OPERACIÓN CENTINELA
 Raidimil Rodriguez | 1-22-0707
 
-El juego se divide en tres niveles. En la galeria practicas con dianas de 100, 200 y 300 puntos. En el hangar, los drones te persiguen y te quitan vidas por contacto. Los drones de los niveles 2 y 3 caen con dos impactos. En el ultimo nivel, Titan-01 cae con siete impactos en el cuerpo.
+Dividí el juego en tres niveles. En el primero puse dianas de 100, 200 y 300 puntos para que el jugador practique antes de enfrentarse a los enemigos. En el hangar, los drones te persiguen y te quitan vidas si te tocan. Los drones de los niveles 2 y 3 se destruyen con dos impactos. En el último nivel aparece Titán-01, que necesita siete impactos en el cuerpo.
 
-Use un CharacterController para el movimiento con WASD o flechas y separe el giro horizontal del jugador y la inclinacion de la camara. Cada disparo crea un proyectil visible. Un rayo recorre el tramo que avanza el proyectil en cada cuadro para detectar impactos. Los puntos y las vidas se conservan entre niveles. La municion se repone al iniciar cada nivel y se espera el impacto del ultimo proyectil antes de decidir la partida.
+Para mover al jugador usé el CharacterController de Unity. Separé el giro del personaje hacia los lados de la inclinación de la cámara para poder apuntar con el ratón. Cada disparo crea un proyectil que se ve en pantalla. Para saber si le dio a algo, el juego lanza un rayo por el tramo que recorre el proyectil en cada cuadro.
 
-En esta version, las dianas y los robots se construyen con formas 3D de Unity. El menu muestra un modelo original del Operador Centinela. Durante la partida se ve su guante junto a la pistola voxel.
+Al pasar de nivel se mantienen los puntos y las vidas, y se repone la munición. Si se acaba la munición, el juego espera a que se resuelva el último disparo antes de decidir el resultado. Dejé 30 segundos para la galería y 60 para cada uno de los otros dos niveles. El tiempo se detiene al pausar y, si llega a cero, se pierde la partida.
+
+Armé las dianas y los robots con formas 3D de Unity. En el menú se ve el modelo original del Operador Centinela. Durante la partida se ven su guante y la pistola de estilo vóxel.
 
 CONTROLES
-WASD o flechas: movimiento. Raton: apuntar. Clic izquierdo: disparar. Esc: pausa.
+- WASD o flechas para moverte
+- Ratón para apuntar
+- Clic izquierdo para disparar
+- Espacio para saltar
+- Esc para pausar
 
-ABRIR
-Unity 6000.6.4f1. Abre el directorio del proyecto en Unity Hub. Abre Assets/Escenas/00 Menu.unity y pulsa Play. Si faltan las escenas, usa Centinela > Preparar escenas en un proyecto recien extraido.
-Pistola: Voxel Weapons, de Texnist. Licencia CC0 1.0.
+CÓMO ABRIR EL PROYECTO
+Usé Unity 6000.6.4f1. Abre la carpeta del proyecto en Unity Hub. Luego abre Assets/Escenas/00 Menu.unity y pulsa Play. Si las escenas no aparecen después de extraer el proyecto, usa Centinela > Preparar escenas.
+
+CRÉDITO
+La pistola es del paquete Voxel Weapons, de Texnist, con licencia CC0 1.0.
 https://technistguru.itch.io/voxel-weapons
-Espacio: saltar.
-Temporizador: 30 segundos en la galeria y 60 segundos en los niveles 2 y 3. Se detiene al pausar. Si llega a cero, se pierde la partida.
