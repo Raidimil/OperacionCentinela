@@ -1,24 +1,38 @@
-OPERACIÓN CENTINELA
-Raidimil Rodriguez | 1-22-0707
+Operación Centinela
 
-Dividí el juego en tres niveles. En el primero puse dianas de 100, 200 y 300 puntos para que el jugador practique antes de enfrentarse a los enemigos. En el hangar, los drones te persiguen y te quitan vidas si te tocan. Los drones de los niveles 2 y 3 se destruyen con dos impactos. En el último nivel aparece Titán-01, que necesita siete impactos en el cuerpo.
+Raidimil Rodriguez
+Matrícula 1-22-0707
 
-Para mover al jugador usé el CharacterController de Unity. Separé el giro del personaje hacia los lados de la inclinación de la cámara para poder apuntar con el ratón. Cada disparo crea un proyectil que se ve en pantalla. Para saber si le dio a algo, el juego lanza un rayo por el tramo que recorre el proyectil en cada cuadro.
+Cómo hice el juego
 
-Al pasar de nivel se mantienen los puntos y las vidas, y se repone la munición. Si se acaba la munición, el juego espera a que se resuelva el último disparo antes de decidir el resultado. Dejé 30 segundos para la galería y 60 para cada uno de los otros dos niveles. El tiempo se detiene al pausar y, si llega a cero, se pierde la partida.
+Hice Operación Centinela en Unity. Es un juego de disparos en primera persona con tres niveles. La idea fue empezar con algo sencillo, que es disparar a dianas, y subir la dificultad hasta llegar al jefe final.
 
-Armé las dianas y los robots con formas 3D de Unity. En el menú se ve el modelo original del Operador Centinela. Durante la partida se ven su guante y la pistola de estilo vóxel.
+Para mover al personaje usé el CharacterController de Unity. Se puede caminar con las flechas o con WASD, saltar con la barra espaciadora y apuntar con el ratón. El clic izquierdo sirve para disparar y con Esc se pausa el juego.
 
-CONTROLES
-- WASD o flechas para moverte
-- Ratón para apuntar
-- Clic izquierdo para disparar
-- Espacio para saltar
-- Esc para pausar
+Cada disparo gasta una bala y lanza un proyectil que se puede ver en pantalla. Para saber si le dio a algo, el juego revisa el camino que va recorriendo el proyectil. Si le da a una diana, los dos desaparecen y se suman los puntos de esa diana. Si le da a un enemigo, el proyectil desaparece y el enemigo aguanta hasta recibir los impactos que le corresponden.
 
-CÓMO ABRIR EL PROYECTO
-Usé Unity 6000.6.4f1. Abre la carpeta del proyecto en Unity Hub. Luego abre Assets/Escenas/00 Menu.unity y pulsa Play. Si las escenas no aparecen después de extraer el proyecto, usa Centinela > Preparar escenas.
+Qué pasa en cada nivel
 
-CRÉDITO
-La pistola es del paquete Voxel Weapons, de Texnist, con licencia CC0 1.0.
-https://technistguru.itch.io/voxel-weapons
+- 01 Galeria de disparos. Puse dianas de 100, 200 y 300 puntos. El jugador tiene 30 segundos para completar el nivel.
+- Hangar de drones. Aquí los drones persiguen al jugador y le quitan una vida si lo tocan. Cada dron cae con dos impactos y el nivel dura 60 segundos.
+- Titán-01. Es el jefe final y hay que darle siete veces para derrotarlo. En este nivel también hay 60 segundos.
+
+Cuando pasas de nivel, mantienes los puntos y las vidas que te quedan, y se repone la munición. La partida termina si te quedas sin vidas, si se acaba el tiempo o si gastas todas las balas y todavía quedan objetivos. Si disparas la última bala, el juego espera a ver si le da a algo antes de decidir el resultado. El tiempo se detiene cuando pausas la partida.
+
+Agregué un menú para empezar a jugar. Cuando ganas o pierdes, sale una pantalla con los puntos que hiciste, las vidas que te quedaron y la opción de volver a jugar.
+
+Diseño y entrega
+
+Usé formas 3D de Unity para armar las dianas y usé un paquete de modelos para los robots. En el menú se ve al Operador Centinela y, mientras juegas, se ven su guante y la pistola. La pistola es del paquete Voxel Weapons de Texnist.
+
+Subí el proyecto de Unity a GitHub y dejé en itch.io una versión para Windows de 64 bits. Para jugar, solo hay que descargar el ZIP, extraerlo completo y abrir OperacionCentinela.exe.
+
+- Proyecto de Unity en GitHub: https://github.com/Raidimil/OperacionCentinela
+- Juego para Windows en itch.io: https://raidimil.itch.io/operacion-centinela
+
+Créditos de los packs
+
+- Voxel Weapons, de Texnist. Modelo y textura de la pistola. Licencia CC0 1.0.
+  https://technistguru.itch.io/voxel-weapons
+- Robot Pack 3D, de pixelmannen, basado en los diseños de Kenney. Modelo y texturas usados para los drones y Titán-01. Licencia CC0.
+  https://opengameart.org/content/robot-pack-3d
